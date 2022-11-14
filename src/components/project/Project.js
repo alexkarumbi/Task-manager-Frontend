@@ -1,7 +1,6 @@
 import * as React from 'react'
 import '../../css/project.css'
 import { ProjectColors } from '../../helpers/ProjectColors'
-import DropdownMenu from '../DropdownMenu'
 import ProjectModal from '../modal/ProjectModal'
 import { Link } from 'react-router-dom'
 import LinearProgressWithLabel from './LinearProgressWithLabel'
@@ -17,6 +16,7 @@ import {
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import StarBorderIcon from '@mui/icons-material/StarBorder'
 import StarIcon from '@mui/icons-material/Star'
+import DropdownMenu from '../DropdownMenu'
 
 //progress bar for task completion
 const Project = ({

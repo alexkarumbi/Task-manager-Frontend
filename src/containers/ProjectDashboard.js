@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { ProjectColors } from '../helpers/ProjectColors'
-import DropdownMenu from '../components/DropdownMenu'
 import ProjectModal from '../components/modal/ProjectModal'
 import Boards from './Boards'
 import {
@@ -15,6 +14,8 @@ import Skeleton from '@mui/material/Skeleton'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import StarBorderIcon from '@mui/icons-material/StarBorder'
 import StarIcon from '@mui/icons-material/Star'
+import DropdownMenu from '../components/DropdownMenu'
+
 
 const ProjectDashboard = ({
   match,
