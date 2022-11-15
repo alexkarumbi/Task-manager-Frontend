@@ -21,7 +21,7 @@ const Projects = ({
     <>
       <Grid container alignContent='center' justifyContent='space-between'>
         <Typography variant='h2' gutterBottom>
-          Projects
+          Tasks
         </Typography>
         <Box className='flex'>
           <Tooltip title='Create New Project'>

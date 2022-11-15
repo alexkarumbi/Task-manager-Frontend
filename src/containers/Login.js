@@ -15,18 +15,18 @@ const Login = ({ history }) => {
         <Box className='flex'>
           <Logo />
           <Typography variant='h1' component='h1'>
-            Mercury
+            Organizer
           </Typography>
         </Box>
         <Box className='flex column'>
           <Typography component='h2' variant='h6' align='center'>
-            Worry about your <em>job</em> not your <em>time</em>.
+            Easy <em>way</em> to <em>organize</em>.
           </Typography>
           <Typography
             component='p'
             align='center'
             className='title-thin padding-bottom'>
-            A project management tool to help you keep your life organized.
+             An easier way to  keep your life organized.
           </Typography>
           <Button
             onClick={() => history.push('/projects')}

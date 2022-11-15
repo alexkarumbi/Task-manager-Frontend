@@ -32,11 +32,11 @@ const ProjectDashboard = ({
   }, [match.params.id])
 
   const fetchProject = () => {
-    fetch(`/api/projects/${match.params.id}`)
+    fetch(`http://localhost:9393/projects/${match.params.id}`)
       .then((res) => res.json())
       .then((data) => {
-        setProject(data)
-        setBoards(data.boards)
+        setProject(data.project)
+        setBoards(data.project.boards)
       })
   }
 
@@ -53,7 +53,7 @@ const ProjectDashboard = ({
 
   const handleDelete = (deleteProject) => {
     handleDeleteProject(deleteProject)
-    history.push('/projects/')
+    history.push('http://localhost:9393/projects')
   }
 
   //get colors for project

@@ -17,7 +17,7 @@ const Boards = ({
   const handleDeleteBoard = (deleteBoard) => {
     const updatedBoards = boards.filter((board) => board.id !== deleteBoard.id)
 
-    fetch(`/api/boards/${deleteBoard.id}`, {
+    fetch(`http://localhost:9393/boards/${deleteBoard.id}`, {
       method: 'DELETE',
     })
 
@@ -29,7 +29,7 @@ const Boards = ({
       board.id === updatedBoard.id ? updatedBoard : board
     )
 
-    fetch(`/api/boards/${updatedBoard.id}`, {
+    fetch(`http://localhost:9393/boards/${updatedBoard.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const Boards = ({
   }
 
   const handleCreateBoard = (newBoard) => {
-    fetch('/api/boards/', {
+    fetch('http://localhost:9393/boards/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -57,13 +57,11 @@ const Boards = ({
     })
       .then((res) => res.json())
       .then((data) => {
-        if (boards.length === 0) {
-          setBoards([data])
-        } else {
+        
           setBoards((prevBoards) => {
-            return [...prevBoards, data]
+            return [...prevBoards, data.board]
           })
-        }
+        
       })
   }
 
