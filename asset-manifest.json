@@ -1,20 +1,13 @@
 {
   "files": {
-    "main.css": "/Task-manager-Frontend/static/css/main.b397c30c.chunk.css",
-    "main.js": "/Task-manager-Frontend/static/js/main.50c8dc8d.chunk.js",
-    "main.js.map": "/Task-manager-Frontend/static/js/main.50c8dc8d.chunk.js.map",
-    "runtime-main.js": "/Task-manager-Frontend/static/js/runtime-main.ca37e34d.js",
-    "runtime-main.js.map": "/Task-manager-Frontend/static/js/runtime-main.ca37e34d.js.map",
-    "static/js/2.e536ca89.chunk.js": "/Task-manager-Frontend/static/js/2.e536ca89.chunk.js",
-    "static/js/2.e536ca89.chunk.js.map": "/Task-manager-Frontend/static/js/2.e536ca89.chunk.js.map",
-    "index.html": "/Task-manager-Frontend/index.html",
-    "static/css/main.b397c30c.chunk.css.map": "/Task-manager-Frontend/static/css/main.b397c30c.chunk.css.map",
-    "static/js/2.e536ca89.chunk.js.LICENSE.txt": "/Task-manager-Frontend/static/js/2.e536ca89.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.713364f6.css",
+    "main.js": "/static/js/main.baa60606.js",
+    "index.html": "/index.html",
+    "main.713364f6.css.map": "/static/css/main.713364f6.css.map",
+    "main.baa60606.js.map": "/static/js/main.baa60606.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.ca37e34d.js",
-    "static/js/2.e536ca89.chunk.js",
-    "static/css/main.b397c30c.chunk.css",
-    "static/js/main.50c8dc8d.chunk.js"
+    "static/css/main.713364f6.css",
+    "static/js/main.baa60606.js"
   ]
 }
