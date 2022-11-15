@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Taskmanager.github.io/static/css/main.b397c30c.chunk.css",
-    "main.js": "/Taskmanager.github.io/static/js/main.50c8dc8d.chunk.js",
-    "main.js.map": "/Taskmanager.github.io/static/js/main.50c8dc8d.chunk.js.map",
-    "runtime-main.js": "/Taskmanager.github.io/static/js/runtime-main.c6e4c385.js",
-    "runtime-main.js.map": "/Taskmanager.github.io/static/js/runtime-main.c6e4c385.js.map",
-    "static/js/2.fe1cf4ad.chunk.js": "/Taskmanager.github.io/static/js/2.fe1cf4ad.chunk.js",
-    "static/js/2.fe1cf4ad.chunk.js.map": "/Taskmanager.github.io/static/js/2.fe1cf4ad.chunk.js.map",
-    "index.html": "/Taskmanager.github.io/index.html",
-    "static/css/main.b397c30c.chunk.css.map": "/Taskmanager.github.io/static/css/main.b397c30c.chunk.css.map",
-    "static/js/2.fe1cf4ad.chunk.js.LICENSE.txt": "/Taskmanager.github.io/static/js/2.fe1cf4ad.chunk.js.LICENSE.txt"
+    "main.css": "/Task-manager-Frontend/static/css/main.b397c30c.chunk.css",
+    "main.js": "/Task-manager-Frontend/static/js/main.50c8dc8d.chunk.js",
+    "main.js.map": "/Task-manager-Frontend/static/js/main.50c8dc8d.chunk.js.map",
+    "runtime-main.js": "/Task-manager-Frontend/static/js/runtime-main.ca37e34d.js",
+    "runtime-main.js.map": "/Task-manager-Frontend/static/js/runtime-main.ca37e34d.js.map",
+    "static/js/2.e536ca89.chunk.js": "/Task-manager-Frontend/static/js/2.e536ca89.chunk.js",
+    "static/js/2.e536ca89.chunk.js.map": "/Task-manager-Frontend/static/js/2.e536ca89.chunk.js.map",
+    "index.html": "/Task-manager-Frontend/index.html",
+    "static/css/main.b397c30c.chunk.css.map": "/Task-manager-Frontend/static/css/main.b397c30c.chunk.css.map",
+    "static/js/2.e536ca89.chunk.js.LICENSE.txt": "/Task-manager-Frontend/static/js/2.e536ca89.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c6e4c385.js",
-    "static/js/2.fe1cf4ad.chunk.js",
+    "static/js/runtime-main.ca37e34d.js",
+    "static/js/2.e536ca89.chunk.js",
     "static/css/main.b397c30c.chunk.css",
     "static/js/main.50c8dc8d.chunk.js"
   ]
