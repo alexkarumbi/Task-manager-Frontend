@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Taskmanager.github.io/static/css/main.b397c30c.chunk.css",
+    "main.js": "/Taskmanager.github.io/static/js/main.50c8dc8d.chunk.js",
+    "main.js.map": "/Taskmanager.github.io/static/js/main.50c8dc8d.chunk.js.map",
+    "runtime-main.js": "/Taskmanager.github.io/static/js/runtime-main.c6e4c385.js",
+    "runtime-main.js.map": "/Taskmanager.github.io/static/js/runtime-main.c6e4c385.js.map",
+    "static/js/2.fe1cf4ad.chunk.js": "/Taskmanager.github.io/static/js/2.fe1cf4ad.chunk.js",
+    "static/js/2.fe1cf4ad.chunk.js.map": "/Taskmanager.github.io/static/js/2.fe1cf4ad.chunk.js.map",
+    "index.html": "/Taskmanager.github.io/index.html",
+    "static/css/main.b397c30c.chunk.css.map": "/Taskmanager.github.io/static/css/main.b397c30c.chunk.css.map",
+    "static/js/2.fe1cf4ad.chunk.js.LICENSE.txt": "/Taskmanager.github.io/static/js/2.fe1cf4ad.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c6e4c385.js",
+    "static/js/2.fe1cf4ad.chunk.js",
+    "static/css/main.b397c30c.chunk.css",
+    "static/js/main.50c8dc8d.chunk.js"
+  ]
+}
