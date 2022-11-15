@@ -2,6 +2,8 @@
   "name": "create-react-app-with-styled-components",
   "version": "5.0.0",
   "private": true,
+  "homepage": "http://alexkarumbi.github.io/Task-manager-Frontend",
+
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -26,7 +28,9 @@
     "start": " react-scripts start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -42,6 +46,7 @@
   },
   "devDependencies": {
     "customize-cra": "latest",
+    "gh-pages": "^4.0.0",
     "react-app-rewired": "latest"
   }
 }
