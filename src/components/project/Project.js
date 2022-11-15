@@ -1,6 +1,7 @@
 import * as React from 'react'
 import '../../css/project.css'
 import { ProjectColors } from '../../helpers/ProjectColors'
+import DropdownMenu from '../DropdownMenu'
 import ProjectModal from '../modal/ProjectModal'
 import { Link } from 'react-router-dom'
 import LinearProgressWithLabel from './LinearProgressWithLabel'
@@ -16,7 +17,6 @@ import {
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import StarBorderIcon from '@mui/icons-material/StarBorder'
 import StarIcon from '@mui/icons-material/Star'
-import DropdownMenu from '../DropdownMenu'
 
 //progress bar for task completion
 const Project = ({
@@ -26,13 +26,13 @@ const Project = ({
   handleDeleteProject,
 }) => {
   // handle progress bar
-  const tasks = project.boards.map((board) => board.tasks).flat()
+  const tasks = project?.boards?.map((board) => board.tasks).flat()
 
-  const completedTasks = tasks.filter((task) => task.completed === true)
+  const completedTasks = tasks?.filter((task) => task.completed === true)
   const progress =
-    completedTasks.length === 0
+    completedTasks?.length === 0
       ? 0
-      : (completedTasks.length / tasks.length) * 100
+      : (completedTasks?.length / tasks?.length) * 100
 
   const currentColorScheme = ProjectColors(project)
 
@@ -91,7 +91,7 @@ const Project = ({
             </Typography>
             <LinearProgressWithLabel
               value={progress}
-              barColor={currentColorScheme.color}
+              barColor={currentColorScheme?.color ||"white"}
             />
           </Link>
         </CardContent>

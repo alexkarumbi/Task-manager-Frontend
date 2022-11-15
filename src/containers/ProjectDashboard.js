@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { ProjectColors } from '../helpers/ProjectColors'
+import DropdownMenu from '../components/DropdownMenu'
 import ProjectModal from '../components/modal/ProjectModal'
 import Boards from './Boards'
 import {
@@ -14,8 +15,6 @@ import Skeleton from '@mui/material/Skeleton'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import StarBorderIcon from '@mui/icons-material/StarBorder'
 import StarIcon from '@mui/icons-material/Star'
-import DropdownMenu from '../components/DropdownMenu'
-
 
 const ProjectDashboard = ({
   match,
@@ -33,11 +32,11 @@ const ProjectDashboard = ({
   }, [match.params.id])
 
   const fetchProject = () => {
-    fetch(`/api/projects/${match.params.id}`)
+    fetch(`http://localhost:9393/projects/${match.params.id}`)
       .then((res) => res.json())
       .then((data) => {
-        setProject(data)
-        setBoards(data.boards)
+        setProject(data.project)
+        setBoards(data.project.boards)
       })
   }
 
@@ -54,7 +53,7 @@ const ProjectDashboard = ({
 
   const handleDelete = (deleteProject) => {
     handleDeleteProject(deleteProject)
-    history.push('/projects/')
+    history.push('http://localhost:9393/projects')
   }
 
   //get colors for project

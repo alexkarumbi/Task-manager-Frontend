@@ -1,5 +1,4 @@
-
-import dateFormat from 'dateformat';
+import dateFormat from 'dateformat'
 
 export const changeDate = (due_date) => {
   const dueDateToDate = parseDate(due_date)

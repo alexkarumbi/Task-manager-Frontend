@@ -6,14 +6,14 @@ import { Logo } from './Logo'
 import { Link } from 'react-router-dom'
 import { Typography, Toolbar, Divider } from '@mui/material'
 import { Drawer } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const drawerWidth = 240
 
 const Navigation = ({ projects, favorites, mode, fetchProjects }) => {
-  let navigate = useNavigate()
+  let history = useHistory()
   const handleHomeClick = (event) => {
-    navigate.push('/projects')
+    history.push('http://localhost:9393/projects')
     fetchProjects()
   }
 
@@ -29,7 +29,7 @@ const Navigation = ({ projects, favorites, mode, fetchProjects }) => {
             noWrap
             sx={{ color: mode ? '#444' : '#fff' }}
             align='center'>
-            Mercury
+            Organizer
           </Typography>
         </a>
       </Toolbar>

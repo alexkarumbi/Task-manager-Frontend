@@ -38,7 +38,7 @@ export const ProjectList = ({ list }) => {
                       <ListItemButton sx={{ pl: 4 }}>
                         <ListItemIcon>
                           <DashboardIcon
-                            style={{ color: currentColorScheme.colorDark }}
+                            style={{ color: currentColorScheme?.colorDark }}
                           />
                         </ListItemIcon>
                         <ListItemText primary={item.title} />

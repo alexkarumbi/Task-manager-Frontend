@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import DropdownMenu from '../DropdownMenu'
 import BoardModal from '../modal/BoardModal'
 import TaskModal from '../modal/TaskModal'
 import Tasks from '../../containers/Tasks'
@@ -13,7 +13,6 @@ import {
 } from '@mui/material'
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import AddIcon from '@mui/icons-material/Add'
-import DropdownMenu from '../DropdownMenu'
 
 const Board = ({
   board,
@@ -45,7 +44,7 @@ const Board = ({
 
   // handle new task
   const handleCreateTask = (newTask) => {
-    fetch('/api/tasks/', {
+    fetch('http://localhost:9393/tasks/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -63,11 +62,12 @@ const Board = ({
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         if (tasks.length === 0) {
-          setTasks([data])
+          setTasks(data.tasks)
         } else {
           setTasks((prevTasks) => {
-            return [...prevTasks, data]
+            return [...prevTasks, data.task]
           })
         }
       })

@@ -27,16 +27,21 @@ const App = () => {
 
   React.useEffect(() => {
     fetchProjects()
+    
   }, [])
 
   const fetchProjects = () => {
-    fetch('/api/projects')
-      .then((res) => res.json())
-      .then((data) => setProjects(data))
+    fetch('http://localhost:9393/projects')
+    .then((res) => res.json())
+    .then((data) => {setProjects(data.projects)
+    }
+     )
+   
   }
+ 
 
   const patchProjects = (project) => {
-    fetch(`/api/projects/${project.id}`, {
+    fetch(`http://localhost:9393/projects/${project.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -51,7 +56,7 @@ const App = () => {
   }
 
   const postProjects = (project) => {
-    fetch('/api/projects/', {
+    fetch("http://localhost:9393/projects",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +77,7 @@ const App = () => {
       (project) => project.id !== deleteProject.id
     )
 
-    fetch(`/api/projects/${deleteProject.id}`, {
+    fetch(`http://localhost:9393/projects/${deleteProject.id}`, {
       method: 'DELETE',
     })
 
@@ -90,8 +95,8 @@ const App = () => {
 
   //handle search
   const [search, setSearch] = React.useState('')
-  const filterProjects = projects.filter((project) => {
-    return project.title.toLowerCase().includes(search.toLowerCase())
+  const filterProjects = projects?.filter((project) => {
+    return project?.title?.toLowerCase().includes(search.toLowerCase())
   })
 
   return (
@@ -99,46 +104,70 @@ const App = () => {
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
         <Router>
-          <Layout
-            toggleTheme={toggleTheme}
-            mode={mode}
-            projects={projects}
-            search={search}
-            setSearch={setSearch}
-            fetchProjects={fetchProjects}>
+         
             <Route
               exact
               path='/'
-              render={(routerProps) => <Login {...routerProps} />}
-            />
-            <Route
-              exact
-              path='/projects'
               render={(routerProps) => (
-                <Projects
-                  {...routerProps}
-                  projects={filterProjects}
-                  mode={mode}
-                  patchProjects={patchProjects}
-                  postProjects={postProjects}
-                  handleUpdatingProject={handleUpdatingProject}
-                  handleDeleteProject={handleDeleteProject}
-                />
-              )}
+                <Layout
+                toggleTheme={toggleTheme}
+       mode={mode}
+       projects={filterProjects}
+       search={search}
+       setSearch={setSearch}
+       fetchProjects={fetchProjects}>
+
+              <Login {...routerProps} />
+              </Layout>)
+              }
             />
+            
             <Route
               exact
               path='/projects/:id'
               render={(routerProps) => (
+                <Layout
+                     toggleTheme={toggleTheme}
+            mode={mode}
+            projects={filterProjects}
+            search={search}
+            setSearch={setSearch}
+            fetchProjects={fetchProjects}>
+
                 <ProjectDashboard
                   {...routerProps}
                   mode={mode}
                   handleUpdatingProject={handleUpdatingProject}
                   handleDeleteProject={handleDeleteProject}
                 />
+                </Layout>
               )}
             />
-          </Layout>
+         
+          <Route 
+              exact
+              path='/projects'
+              render={(routerProps) => (
+                <Layout
+                     toggleTheme={toggleTheme}
+            mode={mode}
+            projects={filterProjects}
+            search={search}
+            setSearch={setSearch}
+            fetchProjects={fetchProjects}>
+                   <Projects
+                  {...routerProps}
+                  projects={projects}
+                  mode={mode}
+                  patchProjects={patchProjects}
+                  postProjects={postProjects}
+                  handleUpdatingProject={handleUpdatingProject}
+                  handleDeleteProject={handleDeleteProject}
+                />
+                </Layout>
+               
+              )}
+            />
         </Router>
       </Box>
     </ThemeProvider>
